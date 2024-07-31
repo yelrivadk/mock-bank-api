@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Success</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css"/>
+</head>
+<body class="container mt-5">
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h2 th:text="${successful} ? 'Payment Successful!' : 'Payment Failed!'"
+                    th:classappend="${successful} ? 'text-success' : 'text-danger'">
+                </h2>
+                <p class="card-text" th:text="${message}"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
